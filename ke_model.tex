@@ -1,0 +1,24 @@
+[B(d=None, i=None), B(d=None, i=None)]<-->[B(d=1, i=None) : B(d=1, i=None)] \ 
+0.5 __s0^{2} kon_{BB}\ 
+__s2 koff_{BB}\ 
+\frac{2.0 __s2}{__s0^{2}} kon_{BB}^{-1} koff_{BB}\ 
+[B(d=None, i=None), I(b=None)]<-->[B(d=None, i=1) : I(b=1)] \ 
+__s0 __s1 kon_{BI}\ 
+__s3 koff_{BI}\ 
+\frac{__s3 kon_{BI}^{-1} koff_{BI}}{__s0 __s1}\ 
+[B(d=None, i=None), B(d=None, i=1) : I(b=1)]<-->[B(d=1, i=2) : B(d=1, i=None) : I(b=2)] \ 
+__s0 __s3 f^{- \phi} kon_{BB}\ 
+__s4 f^{1 - \phi} koff_{BB}\ 
+\frac{__s4 kon_{BB}^{-1} f koff_{BB}}{__s0 __s3}\ 
+[I(b=None), B(d=1, i=None) : B(d=1, i=None)]<-->[B(d=1, i=2) : B(d=1, i=None) : I(b=2)] \ 
+2.0 __s1 __s2 f^{- \phi} kon_{BI}\ 
+__s4 f^{1 - \phi} koff_{BI}\ 
+\frac{0.5 __s4 kon_{BI}^{-1} f}{__s1 __s2} koff_{BI}\ 
+[I(b=None), B(d=1, i=2) : B(d=1, i=None) : I(b=2)]<-->[B(d=1, i=2) : B(d=1, i=3) : I(b=2) : I(b=3)] \ 
+__s1 __s4 \left(f^{-1} g^{-1}\right)^{\phi} kon_{BI}\ 
+2.0 __s5 \left(f g\right)^{1 - \phi} koff_{BI}\ 
+\frac{2.0 __s5 kon_{BI}^{-1} f}{__s1 __s4} g koff_{BI}\ 
+[B(d=None, i=1) : I(b=1), B(d=None, i=1) : I(b=1)]<-->[B(d=1, i=2) : B(d=1, i=3) : I(b=2) : I(b=3)] \ 
+0.5 __s3^{2} \left(f^{-2} g^{-1}\right)^{\phi} kon_{BB}\ 
+__s5 f^{2 - 2 \phi} g^{1 - \phi} koff_{BB}\ 
+\frac{2.0 __s5}{__s3^{2}} \left(f^{2} g\right)^{\phi} f^{2 - 2 \phi} g^{1 - \phi} kon_{BB}^{-1} koff_{BB}\ 

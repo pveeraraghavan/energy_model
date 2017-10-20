@@ -40,13 +40,13 @@ def EnergyRule(name, pattern, phi, deltag):
 
 #convers the kinetics of a reaction (kon, koff) into the corresponding free energy (Gf) 
 def Kin_2_Gf(kon, koff, RT):
-    Gf = -(sp.ln(koff) - sp.ln(kon)) * RT;
+    Gf = (sp.ln(koff) - sp.ln(kon)) * RT;
     return Gf
 
 #converts the kinetics of a reaction (kon, koff and phi) and RT into the corresponding baseline energy of activation (Ea0) 
 def Kin_2_Ea0(kon, koff, phi , RT):
     Gf = Kin_2_Gf(kon, koff, RT);
-    Ea0 = - RT * sp.ln(kon) - phi * Gf;
+    Ea0 = - (RT * sp.ln(kon) + phi * Gf);
     return Ea0
 
 def Kin_2_GRxn(kon, koff, phi, RT):
