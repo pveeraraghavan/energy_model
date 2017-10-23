@@ -1,24 +1,24 @@
-[B(d=None, i=None), B(d=None, i=None)]<-->[B(d=1, i=None) : B(d=1, i=None)] \ 
-0.5 __s0^{2} kon_{BB}\ 
-__s2 koff_{BB}\ 
-\frac{2.0 __s2}{__s0^{2}} kon_{BB}^{-1} koff_{BB}\ 
-[B(d=None, i=None), I(b=None)]<-->[B(d=None, i=1) : I(b=1)] \ 
-__s0 __s1 kon_{BI}\ 
-__s3 koff_{BI}\ 
-\frac{__s3 kon_{BI}^{-1} koff_{BI}}{__s0 __s1}\ 
-[B(d=None, i=None), B(d=None, i=1) : I(b=1)]<-->[B(d=1, i=2) : B(d=1, i=None) : I(b=2)] \ 
-__s0 __s3 f^{- \phi} kon_{BB}\ 
-__s4 f^{1 - \phi} koff_{BB}\ 
-\frac{__s4 kon_{BB}^{-1} f koff_{BB}}{__s0 __s3}\ 
-[I(b=None), B(d=1, i=None) : B(d=1, i=None)]<-->[B(d=1, i=2) : B(d=1, i=None) : I(b=2)] \ 
-2.0 __s1 __s2 f^{- \phi} kon_{BI}\ 
-__s4 f^{1 - \phi} koff_{BI}\ 
-\frac{0.5 __s4 kon_{BI}^{-1} f}{__s1 __s2} koff_{BI}\ 
-[I(b=None), B(d=1, i=2) : B(d=1, i=None) : I(b=2)]<-->[B(d=1, i=2) : B(d=1, i=3) : I(b=2) : I(b=3)] \ 
-__s1 __s4 \left(f^{-1} g^{-1}\right)^{\phi} kon_{BI}\ 
-2.0 __s5 \left(f g\right)^{1 - \phi} koff_{BI}\ 
-\frac{2.0 __s5 kon_{BI}^{-1} f}{__s1 __s4} g koff_{BI}\ 
-[B(d=None, i=1) : I(b=1), B(d=None, i=1) : I(b=1)]<-->[B(d=1, i=2) : B(d=1, i=3) : I(b=2) : I(b=3)] \ 
-0.5 __s3^{2} \left(f^{-2} g^{-1}\right)^{\phi} kon_{BB}\ 
-__s5 f^{2 - 2 \phi} g^{1 - \phi} koff_{BB}\ 
-\frac{2.0 __s5}{__s3^{2}} \left(f^{2} g\right)^{\phi} f^{2 - 2 \phi} g^{1 - \phi} kon_{BB}^{-1} koff_{BB}\ 
+Reaction:& B + B<-->BB \\ 
+K_f:& 0.5 [B]^{2} k_{on BB}\\ 
+K_r:& [BB] k_{off BB}\\ 
+K_d:& \frac{2.0 [BB]}{[B]^{2}} k_{on BB}^{-1} k_{off BB}\\ 
+Reaction:& B + I<-->BI \\ 
+K_f:& [B] [I] k_{on BI}\\ 
+K_r:& [BI] k_{off BI}\\ 
+K_d:& \frac{[BI] k_{on BI}^{-1}}{[B] [I]} k_{off BI}\\ 
+Reaction:& B + BI<-->BBI \\ 
+K_f:& [B] [BI] f^{- \phi} k_{on BB}\\ 
+K_r:& [BBI] f^{1 - \phi} k_{off BB}\\ 
+K_d:& \frac{[BBI] k_{on BB}^{-1} f}{[B] [BI]} k_{off BB}\\ 
+Reaction:& I + BB<-->BBI \\ 
+K_f:& 2.0 [I] [BB] f^{- \phi} k_{on BI}\\ 
+K_r:& [BBI] f^{1 - \phi} k_{off BI}\\ 
+K_d:& \frac{0.5 [BBI] k_{on BI}^{-1}}{[I] [BB]} f k_{off BI}\\ 
+Reaction:& I + BBI<-->BBII \\ 
+K_f:& [I] [BBI] g^{- \phi} k_{on BI}\\ 
+K_r:& 2.0 [BBII] g^{- \phi} g k_{off BI}\\ 
+K_d:& \frac{2.0 [BBII] k_{on BI}^{-1}}{[I] [BBI]} g k_{off BI}\\ 
+Reaction:& BI + BI<-->BBII \\ 
+K_f:& 0.5 [BI]^{2} \left^{\phi} k_{on BB}\\ 
+K_r:& [BBII] \left^{\phi} f g k_{off BB}\\ 
+K_d:& \frac{2.0 [BBII]}{[BI]^{2}} k_{on BB}^{-1} f g k_{off BB}\\ 

@@ -49,25 +49,25 @@ Initial(I(b=None), conc_I_0)
 gvf.global_variables()
                  
 #define kinetics of reactions
-Parameter('kon_BI', 0.1)
-Parameter('koff_BI', 1.0)
-Parameter('kon_BB', 0.01)
-Parameter('koff_BB', 1.0)
+Parameter('k_on_BI', 0.1)
+Parameter('k_off_BI', 1.0)
+Parameter('k_on_BB', 0.01)
+Parameter('k_off_BB', 1.0)
 Parameter('f', 1.0)
 Parameter('g', 1.0)
 Expression('gprime', f*g)
 
 #calculate standard energy of formation from kinetic parameters (eBNG) kJ/mol
-Expression('G_BI', gvf.Kin_2_Gf(kon_BI, koff_BI, RT))
-Expression('G_BB', gvf.Kin_2_Gf(kon_BB, koff_BB, RT))
+Expression('G_BI', gvf.Kin_2_Gf(k_on_BI, k_off_BI, RT))
+Expression('G_BB', gvf.Kin_2_Gf(k_on_BB, k_off_BB, RT))
 Expression('f_G_IBB', gvf.tf_2_Gf(f, RT))
 Expression('g_G_IBBI', gvf.tf_2_Gf(gprime, RT))
 
 #define baselien activation energy from kinetic parameters (eBNG) kJ/mol
 #Expression('E0_IB', gvf.Kin_2_Ea0(kon_BI, koff_BI, phi , RT))
 #Expression('E0_BB', gvf.Kin_2_Ea0(kon_BB, koff_BB, phi , RT))   
-Expression('E0_IB', gvf.Kin_2_Ea0(kon_BI, koff_BI, phi, RT))
-Expression('E0_BB', gvf.Kin_2_Ea0(kon_BB, koff_BB, phi, RT))
+Expression('E0_IB', gvf.Kin_2_Ea0(k_on_BI, k_off_BI, phi, RT))
+Expression('E0_BB', gvf.Kin_2_Ea0(k_on_BB, k_off_BB, phi, RT))
             
 
 #==============================================================================

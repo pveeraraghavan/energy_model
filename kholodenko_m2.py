@@ -78,3 +78,4 @@ EnergyPattern("nrgPatt_BIBI", I(b=1)%B(i=1, d=2)%B(d=2, i=3)%I(b=3), nrg_BIBI)
 ## Define Rules
 Rule("BB_dimerization", B(d=None) + B(d=None) <> B(d=1)%B(d=1), phi, deltaG_BB, energy=True)
 Rule("BI_binding", B(i=None) + I(b=None) <> B(i=1)%I(b=1), phi, deltaG_BI, energy=True)
+Rule("BI_binding_2", B(i=None) + I(b=None) <> B(i=1)%I(b=1), phi, deltaG_BB, energy=True)
